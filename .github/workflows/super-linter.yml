@@ -20,7 +20,7 @@ jobs:
           persist-credentials: false
 
       - name: Super-linter
-        uses: joshjohanning/super-linter@b2a6ed48e3c1b326ce965833fb8b8cbe972ce15d
+        uses: joshjohanning/super-linter@joshjohanning/test-pr-summary-comment
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ENABLE_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: true
