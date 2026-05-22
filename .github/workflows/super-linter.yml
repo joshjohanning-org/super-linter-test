@@ -14,12 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Super-linter
-        uses: joshjohanning/super-linter@joshjohanning/feat-pr-status-summary-comments
+        uses: joshjohanning/super-linter@b2a6ed48e3c1b326ce965833fb8b8cbe972ce15d
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ENABLE_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: true
